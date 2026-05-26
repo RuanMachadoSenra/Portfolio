@@ -33,13 +33,14 @@ async function loadAbout() {
 
     document.getElementById('aboutDetails').innerHTML = `
         <li><span class="detail-label">Universidade</span>${data.university}</li>
+        <li><span class="detail-label">Graduação</span>Engenharia da Computação (2023 – 2027)</li>
         <li><span class="detail-label">Localização</span>${data.location}</li>
-        <li><span class="detail-label">Disponível</span>Sim, aberto a oportunidades</li>
+        <li><span class="detail-label">Idiomas</span>Português (Nativo) · Inglês Avançado</li>
     `;
 
     document.getElementById('aboutInfo').innerHTML = `
-        <div class="about-info-item"><span class="key">Área</span><span class="value">Engenharia da Computação</span></div>
-        <div class="about-info-item"><span class="key">Foco</span><span class="value">Desenvolvimento de Software</span></div>
+        <div class="about-info-item"><span class="key">Foco</span><span class="value">Back-end & Infra</span></div>
+        <div class="about-info-item"><span class="key">Stack</span><span class="value">Java · C# · Spring Boot</span></div>
         <div class="about-info-item"><span class="key">Status</span><span class="value" style="color:var(--accent)">● Disponível</span></div>
     `;
 
@@ -57,6 +58,28 @@ async function loadAbout() {
                 <span class="link-label">${item.sub}</span>
             </div>
         </a>
+    `).join('');
+}
+
+/* ─── LOAD EXPERIENCE ──────────────────────────────────────── */
+async function loadExperience() {
+    const experiences = await fetchJson('/api/experience');
+    const timeline = document.getElementById('experienceTimeline');
+
+    timeline.innerHTML = experiences.map((e, i) => `
+        <div class="timeline-item" style="animation-delay:${i * 0.15}s">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+                <div>
+                    <p class="timeline-role">${e.role}</p>
+                    <p class="timeline-company">${e.company}</p>
+                </div>
+                <span class="timeline-period">${e.period}</span>
+            </div>
+            <ul class="timeline-highlights">
+                ${e.highlights.map(h => `<li>${h}</li>`).join('')}
+            </ul>
+        </div>
     `).join('');
 }
 
@@ -126,7 +149,7 @@ function observeSections() {
 /* ─── INIT ─────────────────────────────────────────────────── */
 (async () => {
     try {
-        await Promise.all([loadAbout(), loadProjects(), loadSkills()]);
+        await Promise.all([loadAbout(), loadExperience(), loadProjects(), loadSkills()]);
         observeSections();
     } catch (err) {
         console.error('Erro ao carregar dados do portfólio:', err);
