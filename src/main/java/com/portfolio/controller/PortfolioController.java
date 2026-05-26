@@ -19,11 +19,14 @@ public class PortfolioController {
         return Map.of(
             "name", "Ruan Machado",
             "title", "Estudante de Engenharia da Computação",
-            "bio", "Estudante de Engenharia da Computação com experiência sólida em " +
-                   "desenvolvimento de software e infraestrutura de TI. Atuo com APIs REST " +
-                   "utilizando Java, Spring Boot, C# e .NET, aplicando boas práticas de " +
-                   "arquitetura, testes unitários e versionamento. Na infraestrutura, possuo " +
-                   "experiência prática em administração de redes, Service Desk e Active Directory.",
+            "bio", "Estudante de Engenharia da Computação com uma base sólida construída na " +
+                   "faculdade e consolidada por experiências profissionais reais. " +
+                   "No desenvolvimento, atuo com APIs REST em Java e Spring Boot, C# e .NET, " +
+                   "aplicando boas práticas de arquitetura, testes unitários e versionamento. " +
+                   "Na infraestrutura, possuo experiência prática em redes, Service Desk e Active Directory. " +
+                   "Além disso, desenvolvi conhecimentos em sistemas embarcados, microcontroladores e eletrônica " +
+                   "ao longo da graduação — áreas que complementam minha visão completa de como software e " +
+                   "hardware se integram para construir soluções eficientes.",
             "university", "Universidade Veiga de Almeida (UVA)",
             "location", "Rio de Janeiro, Brasil",
             "github", "https://github.com/RuanMachadoSenra",
@@ -114,6 +117,7 @@ public class PortfolioController {
             new Skill("Ferramentas", List.of("Git", "GitHub", "Postman", "Power Apps", "Linux")),
             new Skill("Redes & Infra", List.of("TCP/IP", "DHCP", "DNS", "Active Directory", "VPN", "NSO", "Winbox")),
             new Skill("Virtualização", List.of("VirtualBox", "Hyper-V", "Windows Server")),
+            new Skill("Embarcados & Eletrônica", List.of("Arduino", "ESP32", "C (bare-metal)", "Eletrônica Digital", "Eletrônica Analógica", "Protocolos Serial (UART, I2C, SPI)")),
             new Skill("Testes", List.of("JUnit", "Mockito")),
             new Skill("Metodologias", List.of("Scrum", "Kanban")),
             new Skill("Idiomas", List.of("Português (Nativo)", "Inglês Avançado (TOEIC B1)"))

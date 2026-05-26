@@ -33,6 +33,13 @@ const skillIconMap = {
     'Postman':              { type: 'devicon', cls: 'devicon-postman-plain colored' },
     'Linux':                { type: 'devicon', cls: 'devicon-linux-plain colored' },
     'Power Apps':           { type: 'devicon', cls: 'devicon-azure-plain colored' },
+    // Embarcados & Eletrônica
+    'Arduino':                      { type: 'devicon', cls: 'devicon-arduino-plain colored' },
+    'ESP32':                        { type: 'emoji',   val: '🔌' },
+    'C (bare-metal)':               { type: 'devicon', cls: 'devicon-c-plain colored' },
+    'Eletrônica Digital':           { type: 'emoji',   val: '⚡' },
+    'Eletrônica Analógica':         { type: 'emoji',   val: '📡' },
+    'Protocolos Serial (UART, I2C, SPI)': { type: 'emoji', val: '🔗' },
     // Testes
     'JUnit':                { type: 'devicon', cls: 'devicon-junit-plain colored' },
     'Mockito':              { type: 'emoji',   val: '🧪' },
@@ -91,8 +98,9 @@ async function loadAbout() {
     `;
 
     document.getElementById('aboutInfo').innerHTML = `
-        <div class="about-info-item"><span class="key">Foco</span><span class="value">Back-end & Infra</span></div>
-        <div class="about-info-item"><span class="key">Stack</span><span class="value">Java · C# · Spring Boot</span></div>
+        <div class="about-info-item"><span class="key">Foco</span><span class="value">Back-end & Embarcados</span></div>
+        <div class="about-info-item"><span class="key">Stack</span><span class="value">Java · C# · C · Spring Boot</span></div>
+        <div class="about-info-item"><span class="key">Hardware</span><span class="value">Arduino · ESP32</span></div>
         <div class="about-info-item"><span class="key">Status</span><span class="value" style="color:var(--accent)">● Disponível</span></div>
     `;
 
