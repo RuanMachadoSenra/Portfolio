@@ -621,6 +621,9 @@ ul { list-style: none; }
 }
 
 .skill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
     font-size: 0.85rem;
     padding: 0.35rem 0.8rem;
     background: rgba(255,255,255,0.04);
@@ -634,6 +637,16 @@ ul { list-style: none; }
     background: rgba(99,102,241,0.12);
     border-color: rgba(99,102,241,0.3);
     color: var(--text);
+}
+
+.skill-badge i {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.skill-badge .skill-emoji {
+    font-size: 0.9rem;
+    line-height: 1;
 }
 
 /* ─── CONTACT ───────────────────────────────────────────────── */

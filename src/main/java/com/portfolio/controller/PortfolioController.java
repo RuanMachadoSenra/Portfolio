@@ -114,7 +114,8 @@ public class PortfolioController {
             new Skill("Ferramentas", List.of("Git", "GitHub", "Postman", "Power Apps", "Linux")),
             new Skill("Redes & Infra", List.of("TCP/IP", "DHCP", "DNS", "Active Directory", "VPN", "NSO", "Winbox")),
             new Skill("Virtualização", List.of("VirtualBox", "Hyper-V", "Windows Server")),
-            new Skill("Metodologias", List.of("Scrum", "Kanban", "JUnit", "Mockito")),
+            new Skill("Testes", List.of("JUnit", "Mockito")),
+            new Skill("Metodologias", List.of("Scrum", "Kanban")),
             new Skill("Idiomas", List.of("Português (Nativo)", "Inglês Avançado (TOEIC B1)"))
         );
     }
