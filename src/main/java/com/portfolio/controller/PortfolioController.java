@@ -19,6 +19,7 @@ public class PortfolioController {
         return Map.of(
             "name", "Ruan Machado",
             "title", "Estudante de Engenharia da Computação",
+            "tagline", "Desenvolvendo onde software encontra hardware.",
             "bio", "Estudante de Engenharia da Computação com uma base sólida construída na " +
                    "faculdade e consolidada por experiências profissionais reais. " +
                    "No desenvolvimento, atuo com APIs REST em Java e Spring Boot, C# e .NET, " +

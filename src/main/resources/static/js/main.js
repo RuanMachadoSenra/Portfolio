@@ -87,7 +87,7 @@ async function loadAbout() {
     document.title = `${data.name} — Portfólio`;
     document.getElementById('heroName').textContent = data.name;
     document.getElementById('heroTitle').textContent = data.title;
-    document.getElementById('heroBio').textContent = data.bio;
+    document.getElementById('heroTagline').textContent = data.tagline;
     document.getElementById('aboutBio').textContent = data.bio;
 
     document.getElementById('aboutDetails').innerHTML = `
